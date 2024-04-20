@@ -15,8 +15,8 @@ CREATE TABLE Employees (
 );
 
 CREATE TABLE Salaries (
-    emp_no int  PRIMARY KEY NOT NULL,
-    salary int   NOT NULL
+    salary int   NOT NULL,
+    FOREIGN KEY (emp_no int) REFERENCES Employees(emp_no int),
 );
 
 CREATE TABLE Departments (
